@@ -1,5 +1,5 @@
-Hello! 
+Hello! 🌟
 
-vous trouvez ici notre site web sur les gourdes à travers le temps. :) 
+Vous trouvez ici notre site web sur les gourdes à travers le temps. 🥤📜
 
-Bonne lecture! 
+Bonne lecture! 📖😊
