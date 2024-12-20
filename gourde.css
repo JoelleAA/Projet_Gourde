@@ -1,0 +1,97 @@
+/* Corps de la page */
+body {
+    font-family: 'Playfair Display', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* En-tête */
+header {
+    text-align: center;
+    padding: 500px 20px; /* Augmenter la taille de l'en-tête avec plus de padding */
+    background-image: url('background.jpg'); /* Remplacer 'votre-image.jpg' par le chemin de votre image */
+    background-size: cover; /* Couvre toute la largeur de l'en-tête */
+    background-position: center; /* Centrer l'image */
+    color: white;
+    border-bottom: 4px solid #936a4f; /* Garder la bordure marron */
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Introduction */
+.intro {
+    padding: 30px;
+    text-align: center;
+    font-size: 18px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Galerie */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    border: 3px solid #000; /* Bordure noire autour de la galerie */
+    margin: 20px auto;
+    width: 85%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item {
+    margin: 15px;
+    cursor: pointer;
+    text-align: center;
+    width: 20%;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Zoom sur l'image au survol */
+}
+
+/* Texte sous les images dans la galerie */
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #2c3e50; /* Bleu foncé pour le texte */
+}
+
+/* Section de description */
+.description-section {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 30px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    margin: 20px auto;
+    color: #333;
+}
+
+#descriptionText {
+    font-size: 20px;
+    color: #7f8c8d; /* Gris clair pour le texte de la description */
+    line-height: 1.6;
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Joëlle" content="width=device-width, initial-scale=1.0">
+    <title>LES GOURDES À TRAVERS LE TEMPS</title>
+    <link rel="stylesheet" href="gourde.css">
+    <script src="gourde.js" defer></script>
+    <style>
+/* Basic styles for the overlay */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it overlays on top */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the content within the overlay */
+.overlay-content {
+    position: relative;
+    max-width: 90%; /* Ensure it doesn’t stretch too wide */
+    max-height: 80%; /* Ensure it doesn't exceed the viewport height */
+    text-align: center;
+}
+
+/* Position the close button */
+.close-overlay {
+    position: absolute;
+    top: 10px; /* Distance from the top of the image */
+    right: 10px; /* Distance from the right of the image */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1100; /* Ensure it's above the image */
+}
+
+/* Style for the image inside the overlay */
+.overlay img {
+    width: 100%; /* Responsive image width */
+    max-width: 800px; /* Maximum image width */
+    height: auto;
+}
+
+/* Style for the text next to the image */
+.overlay-content #overlayText {
+    margin-top: 15px;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LES GOURDES À TRAVERS LE TEMPS</h1>
+    </header>
+<div class="navigation">
+    <button onclick="window.location.href='future.html'">Perspectives Futures</button>
+</div>
+
+    <section class="intro">
+        <p>
+            <strong>Bienvenue sur notre page dédiée à l'évaluation des gourdes à travers les époques !</strong> 🌍✨ <br>
+            Découvrez comment cet objet pratique a évolué au fil du temps. Des premières gourdes en cuir et en métal aux modèles modernes, chaque époque a apporté sa touche unique. ⏳ <br>
+            Nous vous invitons à explorer notre galerie 📸 où vous trouverez des photos fascinantes des gourdes, des premières versions jusqu'aux designs actuels. <br>
+            Laissez-vous surprendre par cette évolution captivante ! 👀💧
+        </p>
+    </section>
+
+    <section class="gallery">
+        <div class="gallery-item" onclick="showDescription('prehistoire')">
+            <img src="img1.jpg" alt="Préhistoire">
+            <p>Gourde en peau d'animal</p>
+        </div>
+        <div class="gallery-item" onclick="showDescription('antiquite')">
+            <img src="img2.jpg" alt="Antiquité">
+            <p>Gourde en poterie</p>
+        </div>
+        <div class="gallery-item" onclick="showDescription('moyen_age')">
+            <img src="img3.jpg" alt="Moyen Âge">
+            <p>Gourde en bois</p>
+        </div>
+        <div class="gallery-item" onclick="showDescription('renaissance')">
+            <img src="img4.jpg" alt="La Renaissance">
+            <p>Verre souffelé</p>
+        </div>
+        <div class="gallery-item" onclick="showDescription('moderne')">
+            <img src="img5.jpg" alt="époque moderne">
+            <p>Bouteilles en verre</p>
+        </div>
+        <div class="gallery-item" onclick="showDescription('siecle19')">
+            <img src="img6.jpg" alt="19ᵉ siècle">
+            <p>Gourde en métal</p>
+        </div>
+
+        <div class="gallery-item" onclick="showDescription('siecle20')">
+            <img src="img7.jpg" alt="20ᵉ siècle">
+            <p>Bouteilles en plastique</p>
+        </div>
+
+        <div class="gallery-item" onclick="showDescription('siecle21')">
+            <img src="img8.jpg" alt="21ᵉ siècle">
+            <p>Gourde isotherme</p>
+        </div>
+
+
+    <!-- Overlay for displaying the enlarged image and text -->
+<div id="overlay" class="overlay">
+    <div class="overlay-content">
+        <span class="close-overlay" onclick="closeOverlay()">×</span>
+        <img id="overlayImage" src="" alt="">
+        <div id="overlayText"></div>
+    </div>
+</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Joëlle" content="width=device-width, initial-scale=1.0">
+    <title>Évolution des Gourdes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: justify;
+        }
+        h2 {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2><strong>Et maintenant, venez voir comment ça a été évalué !</strong> 🕰️✨</h2>
+
+        <p>
+            <span class="section-title"><strong>Préhistoire</strong> (avant -3000 av. J.-C.)</span><br><br>
+            À cette époque, les premiers humains utilisaient les matériaux disponibles dans leur environnement immédiat, tels que des <strong>coquillages</strong> 🐚, 
+            des <strong>pierres creusées</strong> 🪨 pour former des bols rudimentaires, et des <strong>troncs d'arbres creusés</strong> 🌳 comme récipients plus volumineux. 
+            Les <strong>peaux animales</strong> 🐾, cousues et imperméabilisées, permettaient de transporter l'<strong>eau</strong> 💧 sur de longues distances, répondant ainsi aux besoins 
+            des sociétés <strong>nomades</strong> 🚶‍♂️🌍. Ces récipients, simples et naturels 🌿, n'étaient pas travaillés au-delà de leur forme originelle, car les techniques 
+            de fabrication complexes n'existaient pas encore.
+        </p>
+
+        <p>
+            <span class="section-title"><strong>Antiquité</strong> (vers -3000 av. J.-C. à 476 apr. J.-C.)</span><br><br>
+            Dans l’<strong>Antiquité</strong>, le développement des techniques artisanales a marqué une étape essentielle dans la fabrication des récipients. 
+            L’invention de la <strong>poterie</strong> 🏺, grâce à la découverte de l’argile et de la cuisson, a révolutionné ce domaine. Ces contenants, 
+            considérés comme durables et aux formes variées, étaient utilisés pour boire, stocker de l’<strong>eau</strong> et conserver des aliments 🍶. 
+            Avec l’émergence des <strong>métaux</strong> ⚒️, les civilisations avancées, comme les Grecs et les Romains, ont perfectionné leurs techniques 
+            pour produire des récipients en <strong>bronze</strong>, en <strong>cuivre</strong> ou en <strong>or</strong> 🏆. Les <strong>Calebasses</strong> (fruits séchés et évidés) 
+            ont également commencé à être utilisés, notamment encore populaires en <strong>Afrique</strong> et <strong>Amérique centrale</strong> 🌍.
+        </p>
+
+        <p>
+            <span class="section-title"><strong>Moyen Âge</strong> (476 à 1492)</span><br><br>
+            Le <strong>Moyen Âge</strong> se caractérise par l'usage de matériaux issus des traditions locales 🪵. Dans les cultures rurales, le <strong>bois</strong> et 
+            les <strong>cornes animales</strong> 🦌 étaient couramment utilisés pour fabriquer des récipients tels que des <strong>coupes</strong> et des <strong>gobelets</strong> 
+            car ils étaient faciles d’utilisation. Parallèlement, le <strong>verre</strong>, bien que rare et coûteux, commençait à émerger comme un signe de <strong>prestige</strong> 💎, 
+            réservé aux élites à la recherche de distinction sociale.
+        </p>
+
+        <p>
+            <span class="section-title"><strong>La Renaissance</strong> (1492 à 1600)</span><br><br>
+            La <strong>Renaissance</strong> marque une période de raffinement et d'<strong>innovation</strong> dans la conception des récipients 🎨. Les progrès en soufflage 
+            du <strong>verre</strong>, notamment à Venise, ont permis de créer des récipients élégants, souvent ornés et colorés 🏺🌈. Parallèlement, 
+            les <strong>métaux précieux</strong> comme l'<strong>or</strong> et l'<strong>argent</strong> étaient utilisés par les classes supérieures pour fabriquer des gobelets symbolisant 
+            richesse et <strong>pouvoir</strong> 💰.
+        </p>
+
+        <p>
+            <span class="section-title"><strong>Époque moderne</strong> (1600 à 1800)</span><br><br>
+            Cette période se distingue par des avancées dans les matériaux et la fabrication des récipients 🏭. La <strong>porcelaine</strong> importée de Chine 
+            est devenue un matériau prisé pour les récipients à boisson ☕, appréciée pour sa finesse et son élégance. Avec la <strong>Révolution industrielle</strong>, 
+            la production de masse a rendu des récipients comme les <strong>bouteilles en verre</strong> accessibles à un plus large public 🍾.
+        </p>
+
+        <p>
+            <span class="section-title"><strong>19ᵉ siècle</strong> (1800 à 1900)</span><br><br>
+            Du <strong>19ᵉ siècle</strong> à nos jours, l’évolution des récipients reflète les transformations <strong>technologiques</strong> et <strong>économiques</strong>. L’<strong>aluminium</strong> 
+            s’impose comme un matériau léger et pratique 🛠️, tandis que les <strong>bouteilles en verre industrielles</strong> deviennent accessibles grâce à la révolution 
+            industrielle. C’est aussi l’époque des premiers <strong>thermos</strong>, conçus pour maintenir la température des liquides ❄️☀️.
+        </p>
+
+        <p>
+            <span class="section-title"><strong>20ᵉ siècle</strong> (1900 à 2000)</span><br><br>
+            Le <strong>20ᵉ siècle</strong> marque une révolution avec l’apparition des <strong>gobelets</strong> et <strong>bouteilles en plastique</strong> ♻️, populaires mais ayant un impact 
+            écologique préoccupant 🌍. Les <strong>gourdes en acier inoxydable</strong> émergent comme une alternative durable 💧, annonçant une diversification 
+            des matériaux.
+        </p>
+
+        <p>
+            <span class="section-title"><strong>21ᵉ siècle</strong> (2000 à aujourd'hui)</span><br><br>
+            Au <strong>21ᵉ siècle</strong>, un retour à l'<strong>éco-responsabilité</strong> s’opère 🌱. Les matériaux durables comme le <strong>verre</strong>, l’<strong>inox</strong> ou le <strong>bambou</strong> 
+            gagnent en popularité 🌏. Les <strong>technologies modernes</strong> apportent des innovations comme les <strong>bouteilles connectées</strong> 📱, tout en mettant l’accent sur la réutilisation 
+            et la réduction des déchets plastiques.
+        </p>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
